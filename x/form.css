@@ -1,0 +1,191 @@
+body{background:url(afric.jpg);
+     background-size:cover;
+	}
+
+
+#userform label{
+
+ text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+
+  margin-right:200px; 
+  color: white;
+  margin-top:20px;
+  margin-left:100px;
+  display:block;
+  font-family:"Liberation Mono";
+  font-weight:900;
+  font-size:25px;
+ 
+}
+
+#userform:hover {
+
+  border-image-source: url(a.jpg);
+  border-image-slice: 25%;
+  border-image-width: 1;
+  border-image-outset: 1;
+  border-image-repeat: repeat;
+  -webkit-box-shadow: 9px 9px 200px 10px  deepskyblue;
+  -moz-box-shadow:    9px 9px 200px 10pxdeepskyblue; 
+  box-shadow:         9px 9px 200px 10px deepskyblue; 
+
+
+}
+
+
+
+#userform {
+   
+   margin: 100px 350px;
+   width:40%;
+   padding:20px;
+   padding-bottom:80px;
+   background:url(a.jpg);
+   background-size:cover;
+
+   border-image-source: url(a.jpg);
+   border-image-slice: 25%;
+   border-image-width: 1;
+   border-image-outset: 1;
+   border-image-repeat: repeat;
+   -webkit-box-shadow:  9px 9px 200px 10px yellow; 
+   -moz-box-shadow:     9px 9px 200px 10px yellow;  
+   box-shadow:         9px 9px 200px 10px yellow; 
+
+   /* border:10px solid green;*/
+   border-radius:5px;
+   -moz-animation: pulse 1s alternate infinite;
+   -webkit-animation: pulse 1s alternate infinite;
+   animation: pulse 1s alternate infinite;
+
+}
+
+
+@-moz-keyframes pulse{
+
+	0%{width:40%;}
+
+	100%{
+		-webkit-box-shadow:9px 9px 200px 10px orange;
+  		-moz-box-shadow:    9px 9px 200px 10px orange; 
+  		box-shadow:         9px 9px 200px 10px orange; 
+		transform:scale(1.04);
+	     }
+}
+@-webkit-keyframes pulse{
+
+	0%{width:40%;}
+
+	100%{
+		-webkit-box-shadow:9px 9px 200px 10px orange;
+  		-moz-box-shadow:    9px 9px 200px 10px orange; 
+  		box-shadow:         9px 9px 200px 10px orange; 
+		transform:scale(1.04);
+	     }
+}
+
+
+
+#sign{
+
+  	background:green;
+  	color:yellowgreen;
+  	border:3px solid darkgreen;
+  	border-radius:4px;
+  	cursor: pointer;
+  
+}
+
+
+.field{
+
+	opacity:.7;
+  	background:yellow;
+  	margin-top:20px;
+  	margin-left:20%;
+  	color:black;
+  	font-weight:900;
+  	font-family:Arial;
+  	border: 2px solid black;
+  	border-radius:5px;
+  	padding:5px;
+  	transition-property:all;
+  	transition-duration:1s;
+  	transition-timing-function:linear;
+}
+
+
+.field:active{
+
+  	transform:scale(1.8);
+
+}
+
+
+.field:hover{
+
+  	background:white;
+  	border:1px solid yellow;
+}
+
+#image{
+
+       margin-left:60%;
+       position:absolute;
+       padding-left:5%;       
+       background:url(place.jpg);
+       background-size:cover;
+       width:20%;
+       height:30%;
+       -webkit-box-shadow:  0px 0px 3px 2px yellow; 
+       -moz-box-shadow:     0px 0px 3px 2px yellow;  
+        box-shadow:         0px 0px 3px 2px yellow; 
+
+}
+
+#image small{
+
+	     color:yellow;
+             position:absolute;
+             margin-top:95%;
+}
+
+
+#browse{
+	color:color: rgba(215, 44, 44, 0);
+	margin-top:170%;
+	}
+
+/*EXPERIMENTAL CODE FOR LIGHT BOX */
+
+
+
+#lightbox{
+	background-color:#eee;
+	padding: 10px;
+	border-bottom: 2px solid #666;
+	border-right: 2px solid #666;
+	}
+
+
+#lightboxDetails{
+	font-size: 0.8em;
+	padding-top: 0.4em;
+	}
+
+	
+#lightboxCaption{ float: left; }
+
+
+#keyboardMsg{ float: right; }
+
+
+#lightbox img{ border: none; } 
+
+
+#overlay img{ border: none; }

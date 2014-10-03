@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2014 by AyabongaQwabi (http://jsbin.com/saxon/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<html>
+<head>
+<meta name="description" content="[add your bin description]" />
+<script type="text/javascript" src="lightbox.js"></script>
+
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+  
+  
+  <div id="userform">
+
+    <div id="image">
+                   <small> profile Picture</small>
+		   <input type="file" name="datafile" id="browse">
+    
+    </div>
+
+    <label> Name </label>
+    <input type="text" id="Name" class="field"></input>
+    <br>
+    <label> Surname </label>
+    <input type="text" id="Surname" class="field"></input>
+    <br>
+    <label> E-mail </label>
+    <input type="text" id="email" class="field"></input>
+    <br>
+    <label> Username</small></label>
+    <input type="text" id="Username" class="field"></input>
+    
+    <input type="button" value="Sign me up" id="sign">
+
+</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<script id="jsbin-javascript">
+var Users =[];
+var fields = ["#Name", "#Surname", "#email", "#Username"];
+
+//FIELD VALIDATION SETUP
+
+var validateField = function(fieldId){
+  var fieldValue =$(fieldId).val();          //value in textbox
+  if(fieldValue===""){                       //if value is empty
+    $(fieldId).css({"background":"#FE2E2E"});//change background color of box
+  }
+  else{
+    $(fieldId).css({"background":"yellow"}); //if not change it back to yellow
+  }
+};
+
+//BLUR EVENTS SETUP
+
+$.each(fields, function(fieldIndex){ //when the user loses focus of textbox
+  var fieldId = fields[fieldIndex]; 
+  
+  $(fieldId).blur(function(){
+    validateField(fieldId);          //validate if empty or not
+  });
+});
+
+
+
+//ON BUTTON CLICK FUNCTION
+
+
+var appendUser = function(){
+  var HasEmptyField=false;
+  
+  $.each(fields, function(FieldIndx){    //loop through all fields
+    var fieldText = $(fields[FieldIndx]).val();
+    
+    if(fieldText==="")                   //if you find an empty one
+      { 
+        HasEmptyField=true;
+        alert("Please fill in "+fields[FieldIndx].substring(1)+" field !"); //alert the user 
+        return false; //then return false for now
+      }
+    
+  });
+  if(!HasEmptyField){Users.push({Name: $(fields[0]).val(),Surname:$(fields[1]).val(),Email:$(fields[2]).val(),Username:$(fields[3]).val()});} //if there arent any empties append the user
+console.log(Users);
+
+
+
+};
+
+
+$("#sign").click(appendUser);
+
+
+
+
+</script>
+</body>
+</html>
